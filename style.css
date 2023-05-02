@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 80vh;
+    background-color: beige;
+}
+nav{
+    min-height: 20vh;
+    background-color: aqua;
+}
+.card{
+    background-color: blue;
+    width: 500px;
+    height: 300px;
+}
