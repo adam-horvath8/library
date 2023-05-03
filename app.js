@@ -9,12 +9,19 @@ function book(author, title, numberOfPages, read) {
 //Selectors
 const newBookBtn = document.getElementById("newBtn");
 const nav = document.querySelector("nav");
-const container = document.querySelector('.container');
-
+const container = document.querySelector(".container");
+const form = document.getElementById("popup");
+const closeButton = document.getElementById("closeBtn");
 
 newBookBtn.addEventListener("click", function () {
-  const newCard = document.createElement("div");
-  newCard.classList.add("card");
-  container.appendChild(newCard);
+  form.style.display = "block";
 });
 
+closeButton.addEventListener("click", function () {
+  form.style.display = "none";
+});
+
+
+// const newCard = document.createElement("div");
+// newCard.classList.add("card");
+// container.appendChild(newCard);

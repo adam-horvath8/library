@@ -1,19 +1,29 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.container{
-    min-height: 80vh;
-    background-color: beige;
+.container {
+  min-height: 80vh;
+  background-color: beige;
 }
-nav{
-    min-height: 20vh;
-    background-color: aqua;
+nav {
+  min-height: 20vh;
+  background-color: aqua;
 }
-.card{
-    background-color: blue;
-    width: 500px;
-    height: 300px;
+.card {
+  background-color: blue;
+  width: 500px;
+  height: 300px;
+}
+#popup {
+ width: 200px;
+ height: 200px;
+ background-color: rgb(56, 185, 185);
+ position: fixed;
+ top:50%;
+ left:50%;
+ transform: translate(-50%, -50%);
+ display: none;
 }
