@@ -7,15 +7,19 @@
 .container {
   min-height: 80vh;
   background-color: beige;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 30px;
+  gap: 30px;
 }
 nav {
   min-height: 20vh;
   background-color: aqua;
 }
-.card {
-  background-color: blue;
-  width: 500px;
-  height: 300px;
+.card{
+  background-color: aquamarine;
+  display:
 }
 #popup {
  width: 200px;
