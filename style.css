@@ -9,25 +9,40 @@
   background-color: beige;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  padding: 30px;
+  grid-auto-rows: 300px 300px 300px;
+  padding: 50px;
   gap: 30px;
 }
+
 nav {
   min-height: 20vh;
   background-color: aqua;
 }
-.card{
+.card {
   background-color: aquamarine;
-  display:
 }
 #popup {
- width: 200px;
- height: 200px;
- background-color: rgb(56, 185, 185);
- position: fixed;
- top:50%;
- left:50%;
- transform: translate(-50%, -50%);
- display: none;
+  width: 450px;
+  height: 600px;
+  background-color: rgb(56, 185, 185);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  padding: 50px 30px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#popup h3{
+  font-size: 3rem;
+}
+
+form input{
+  padding: 5px;
+  width: 350px;
+  border-radius: 10px;
+  border: none;
 }

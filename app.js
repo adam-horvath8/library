@@ -8,6 +8,7 @@ function book(author, title, numberOfPages, read) {
 
 //Selectors
 const newBookBtn = document.getElementById("newBtn");
+const container = document.getElementById("container");
 //Form selectors
 const form = document.getElementById("popup");
 const authorInput = document.getElementById("author");
@@ -16,14 +17,9 @@ const pagesInput = document.getElementById("numPages");
 const closeButton = document.getElementById("closeBtn");
 const submitButton = document.getElementById("submitForm");
 
-//Card selectors
-const cardDiv = document.getElementById("card");
-const cardHeading = cardDiv.querySelector("h3");
-const cardAuthor = document.getElementById("authorPar");
-const cardPages = document.getElementById("pagesPar");
 
 newBookBtn.addEventListener("click", function () {
-  form.style.display = "block";
+  form.style.display = "flex";
 });
 
 closeButton.addEventListener("click", function () {
@@ -32,16 +28,27 @@ closeButton.addEventListener("click", function () {
 
 submitButton.addEventListener("click", function (e) {
   e.preventDefault();
+  form.style.display = "none";
   const newBook = new book(
     authorInput.value,
     titleInput.value,
     pagesInput.value
   );
-  cardHeading.innerText = newBook.title;
-  cardAuthor.textContent = newBook.author;
-  cardPages.innerText = newBook.pages;
+  const cardDiv = document.createElement("div");
+  cardDiv.classList.add("card");
 
+  const cardHeading = document.createElement("h3");
+  cardHeading.innerText = newBook.title;
+
+  const cardAuthor = document.createElement("p");
+  cardAuthor.innerText = newBook.author;
+
+  const cardPages = document.createElement("p");
+  cardPages.innerText = newBook.numberOfPages;
+
+  
   cardDiv.appendChild(cardHeading);
   cardDiv.appendChild(cardAuthor);
   cardDiv.appendChild(cardPages);
+  container.appendChild(cardDiv);
 });
