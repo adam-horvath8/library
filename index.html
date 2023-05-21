@@ -7,10 +7,11 @@
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
+    <script src="https://kit.fontawesome.com/46d4c6dfa4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>  
-        <button id="newBtn">New Book</button>  
+        <i class="fa-sharp fa-solid fa-circle-plus" id="newBtn"></i> 
     </nav>
     <div class="container" id="container">
         
@@ -20,10 +21,14 @@
         <input type="text" id="title" placeholder="Title">
         <input type="text" id="author" name="aut" placeholder="Author">
         <input type="number" id="numPages" placeholder="Number of pages">
-        <label for="read">Have you read it?</label>
-        <input type="checkbox" id="read">
-        <button id="closeBtn" type="button">C</button>
-        <button id="submitForm" type="button">S</button>
+        <div class="checkDiv">
+            <label for="read" id="checkboxLabel">Have you read it?</label>
+            <input type="checkbox" id="read" class="checkbox">
+        </div>
+        <div class="bottomForm">
+            <button id="submitForm" type="button">Submit</button>
+            <button id="closeBtn" type="button">Close</button>
+        </div>
     </form>
 </body>
 </html>
