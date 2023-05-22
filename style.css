@@ -2,18 +2,22 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: 'Asap', sans-serif;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Rubik', sans-serif;
 }
-
+/* container */
 .container {
   min-height: 80vh;
   background-color: beige;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-rows: 300px 300px 300px;
+  grid-auto-rows: 400px 400px 400px;
   padding: 50px;
   gap: 30px;
 }
 
+/* nav */
 nav {
   min-height: 20vh;
   background-color: aqua;
@@ -21,14 +25,85 @@ nav {
   justify-content: center;
   align-items: center;
 }
+#newBtn {
+  font-size: 4rem;
+}
+#newBtn:hover {
+  opacity: 0.7;
+  font-size: 4.5rem;
+}
+
+/* book card */
 .card {
-  background-color: aquamarine;
+  background-color: rgb(203, 252, 235);
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: blue;
+  color: black;
   padding: 15px;
+  border-radius: 10px;
+  box-shadow:2px 3px 3px black;
 }
+.cardHeading {
+  font-size: 1.5rem;
+  margin: 30px 15px;
+}
+.cardAuthor {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+.cardPages {
+  font-size: 1rem;
+}
+
+.topDiv {
+  color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+.cardClose {
+  font-size: 1.5rem;
+  color: red;
+}
+.cardClose:hover {
+  opacity: 0.7;
+}
+
+.readDiv {
+  height: 20%;
+  width: 90%;
+  margin-top: 70px;
+  background-color: rgb(219, 26, 26);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.readDiv::before{
+  content: "Not Read";
+}
+
+.checked {
+  background-color: green;
+  height: 20%;
+  width: 90%;
+  margin-top: 70px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checked::before{
+  content: "Read";
+}
+
+.bookIcon{
+  margin-left: 8px;
+}
+/* form */
 #popup {
   width: 450px;
   height: 600px;
@@ -55,26 +130,19 @@ form input {
   height: 2rem;
   font-size: 1.2rem;
   border: none;
+  outline: none;
 }
-.checkbox{
+.checkbox {
   margin-top: 10px;
 }
-#checkboxLabel{
+#checkboxLabel {
   color: white;
   font-size: 1.2rem;
 }
-.checkDiv{
+.checkDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#newBtn {
-  font-size: 4rem;
-}
-#newBtn:hover {
-  opacity: 0.7;
-  font-size: 4.5rem;
 }
 
 .bottomForm {
@@ -89,13 +157,4 @@ form input {
 }
 #closeBtn {
   height: 30%;
-}
-
-.cardHeading{
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-.cardAuthor{
-  font-size: 1.5rem;
-  margin-bottom: 8px;
 }

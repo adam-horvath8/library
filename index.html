@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
     <script src="https://kit.fontawesome.com/46d4c6dfa4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;700&family=Playfair+Display:wght@400;700&family=Rubik:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>  
@@ -18,15 +21,15 @@
     </div>
     <form action="#" method="post" id="popup" class="form">
         <h3>Book info</h3>
-        <input type="text" id="title" placeholder="Title">
-        <input type="text" id="author" name="aut" placeholder="Author">
-        <input type="number" id="numPages" placeholder="Number of pages">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="author" name="aut" placeholder="Author" required>
+        <input type="number" id="numPages" placeholder="Number of pages" required>
         <div class="checkDiv">
             <label for="read" id="checkboxLabel">Have you read it?</label>
             <input type="checkbox" id="read" class="checkbox">
         </div>
         <div class="bottomForm">
-            <button id="submitForm" type="button">Submit</button>
+            <button id="submitForm" type="submit">Submit</button>
             <button id="closeBtn" type="button">Close</button>
         </div>
     </form>
